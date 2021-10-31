@@ -24,21 +24,6 @@ class EncryptedValue:
         cipher_func, plain_func = None,
         _is_mult: bool = False
     ):
-        """
-        Returns the result of a binary operation between self and other.
-        
-        :param cipher_func:
-            Must take three Ciphertext arguments.
-            The function must apply a binary operation to the
-            first two arguments, and overwrite the third argument
-            with the result.
-
-        :param plain_func:
-            Optional. Used when `other` is an unencrypted value
-            for performance improvement.
-            If omitted, `other` will be encrypted and passed into
-            `cipher_func`.
-        """
         if isinstance(other, EncryptedValue):
             other = other._ciphertext
 

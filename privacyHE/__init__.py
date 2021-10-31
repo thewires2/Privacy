@@ -68,24 +68,9 @@ def load_relin_keys(filepath: str) -> None:
 
 def initialize(
     mode: str = 'float',
-    max_int: int = 262144,
+    max_int: int = 18446744073709551615,
     poly_modulus_degree: int = 8192,
 ) -> None:
-    """
-    Re-initializes the FHE encryption context.
-    This must be done before any other operations are performed.
-
-    :param mode:
-        Must be `int` or `float`.
-
-    :param max_int:
-        Only integers in the range [-max_int + 1, max_int] inclusive
-        are representable. If `mode != 'int'`, this option is ignored.
-
-    :param poly_modulus_degree:
-        Should be a power of 2. Higher values will allow more computation
-        before the noise budget is exhausted, at the cost of performance.
-    """
     if mode not in ['int', 'float']:
         raise ValueError("mode must be 'int' or 'float'")
 

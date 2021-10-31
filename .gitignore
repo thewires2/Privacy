@@ -6,3 +6,6 @@ build/*
 .coverage
 examples/**/*.dat
 examples/**/*.key
+keys
+inputs
+outputs

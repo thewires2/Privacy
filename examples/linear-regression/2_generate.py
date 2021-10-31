@@ -1,7 +1,5 @@
-# Client-side 
-from pathlib import Path
 import numpy as np
-import pandas as pd
+from pathlib import Path
 from privacyHE import initialize, encrypt, load_public_key, load_relin_keys
 
 
@@ -10,14 +8,13 @@ load_public_key('keys/public.key')
 load_relin_keys('keys/relin.key')
 Path('inputs').mkdir(exist_ok=True)
 
-df = pd.read_excel("C:\\Users\\arnav\\Downloads\\accounts.xlsx")
-COEFFICIENTS = np.array(list(df['Revenue'][:3]))
+
+COEFFICIENTS = np.array([3.2, -1.7, 0.8])
 def generate_point():
     xs = np.random.normal(size=3, scale=10)
     noise = np.random.normal(scale=0.2)
     y = np.inner(xs, COEFFICIENTS) + noise
     return (xs, y)
-
 
 N_DATAPOINTS = 50
 for i in range(N_DATAPOINTS):

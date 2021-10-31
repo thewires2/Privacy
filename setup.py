@@ -8,9 +8,9 @@ setup(
     description="Framework for end to end processing on encrypted data with python",
     long_description=README,
     long_description_content_type="text/markdown",
-    url="https://github.com/wgxli/simple-fhe",
-    author="Samuel Li",
-    author_email="privacyHE@samuelj.li",
+    url="https://github.com/thewires2/Privacy",
+    author="Arnav Bagchi",
+    author_email="arnavbagchi04@gmail.com",
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",

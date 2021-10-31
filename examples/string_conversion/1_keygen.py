@@ -1,7 +1,5 @@
 from pathlib import Path
-from privacyHE import initialize, generate_keypair
-
-initialize('float')
+from privacyHE import  generate_keypair
 
 public_key, private_key, relin_keys = generate_keypair()
 
